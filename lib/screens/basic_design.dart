@@ -15,7 +15,7 @@ class BasicDesignScreen extends StatelessWidget {
         const ButtonSection(),
         //Description
         Container(
-          margin: const EdgeInsets.symmetric(horizontal: 50, vertical: 30),
+          margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
           child: const Text(
               'Deserunt et adipisicing quis reprehenderit et sunt excepteur veniam veniam exercitation. Ullamco labore velit aliqua ut irure eiusmod id id velit irure amet. Ex sint veniam fugiat ut tempor amet. Pariatur nulla exercitation magna ullamco. Et ullamco non officia adipisicing Lorem voluptate sit pariatur. Tempor id veniam culpa duis officia. \n\nMinim culpa ut consequat in quis cillum aliquip laboris elit laborum reprehenderit voluptate. Id amet officia eiusmod mollit officia voluptate sit nostrud. Sit Lorem amet et amet deserunt sit officia duis exercitation aliquip est aliqua cillum.'),
         )
@@ -32,7 +32,7 @@ class Title extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 50, vertical: 30),
+      margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
       child: Row(
         children: [
           Column(
