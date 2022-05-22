@@ -12,8 +12,44 @@ class CardTable extends StatelessWidget {
       children: const [
         TableRow(
           children: [
-            _SingleCard(),
-            _SingleCard(),
+            _SingleCard(
+              color: Colors.blue,
+              icon: Icons.border_all,
+              text: 'General',
+            ),
+            _SingleCard(
+              color: Colors.pinkAccent,
+              icon: Icons.car_rental,
+              text: 'Transport',
+            ),
+          ],
+        ),
+        TableRow(
+          children: [
+            _SingleCard(
+              color: Colors.amber,
+              icon: Icons.ac_unit_rounded,
+              text: 'Clima',
+            ),
+            _SingleCard(
+              color: Colors.cyan,
+              icon: Icons.access_time_outlined,
+              text: 'Tiempo',
+            ),
+          ],
+        ),
+        TableRow(
+          children: [
+            _SingleCard(
+              color: Colors.lightGreen,
+              icon: Icons.account_balance_wallet_rounded,
+              text: 'Billetera',
+            ),
+            _SingleCard(
+              color: Colors.purpleAccent,
+              icon: Icons.add_a_photo_outlined,
+              text: 'Camara',
+            ),
           ],
         ),
       ],
@@ -22,7 +58,16 @@ class CardTable extends StatelessWidget {
 }
 
 class _SingleCard extends StatelessWidget {
-  const _SingleCard({Key? key}) : super(key: key);
+  final IconData icon;
+  final Color color;
+  final String text;
+
+  const _SingleCard({
+    Key? key,
+    required this.icon,
+    required this.color,
+    required this.text,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -34,20 +79,20 @@ class _SingleCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(10)),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: const [
+        children: [
           CircleAvatar(
-            backgroundColor: Colors.blue,
+            backgroundColor: color,
             child: Icon(
-              Icons.pie_chart_sharp,
+              icon,
               size: 35,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Text(
-            'General',
-            style: TextStyle(color: Colors.blue, fontSize: 18),
+            text,
+            style: TextStyle(color: color, fontSize: 18),
           )
         ],
       ),
